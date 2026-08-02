@@ -1,0 +1,58 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam shadowing true
+
+skinparam usecase {
+    BackgroundColor #F8FAFC
+    BorderColor #0EA5E9
+    FontColor #0F172A
+    FontSize 12
+    FontStyle bold
+}
+
+skinparam actor {
+    BackgroundColor #E0F2FE
+    BorderColor #0284C7
+}
+
+actor "Quản trị viên (Admin)" as Admin
+actor "Nhân viên (Staff)" as Staff
+
+package "Phân Hệ Quản Lý Sản Phẩm và Danh Mục (TechStore)" {
+  usecase "Xem danh sách sản phẩm" as UC_ViewProd
+  usecase "Tìm kiếm và Lọc sản phẩm" as UC_SearchProd
+  usecase "Thêm sản phẩm mới" as UC_AddProd
+  usecase "Cập nhật thông tin sản phẩm" as UC_EditProd
+  usecase "Bật/Tắt Flash Sale" as UC_FlashSale
+  usecase "Xóa sản phẩm" as UC_DelProd
+  usecase "Upload hình ảnh sản phẩm" as UC_Upload
+  usecase "Quản lý liên kết Cross-sell/Up-sell" as UC_Relation
+
+  usecase "Xem danh sách danh mục" as UC_ViewCat
+  usecase "Thêm danh mục mới (Gốc/Con)" as UC_AddCat
+  usecase "Chỉnh sửa danh mục" as UC_EditCat
+  usecase "Xóa danh mục" as UC_DelCat
+}
+
+' Phân quyền Staff
+Staff --> UC_ViewProd
+Staff --> UC_SearchProd
+Staff --> UC_AddProd
+Staff --> UC_EditProd
+Staff --> UC_FlashSale
+Staff --> UC_ViewCat
+Staff --> UC_AddCat
+Staff --> UC_EditCat
+
+' Phân quyền Admin (Kế thừa Staff + Quyền xóa)
+Admin --|> Staff
+Admin --> UC_DelProd
+Admin --> UC_DelCat
+
+' Quan hệ Include & Extend
+UC_AddProd ..> UC_Upload : <<include>>
+UC_EditProd ..> UC_Upload : <<include>>
+UC_EditProd <.. UC_Relation : <<extend>>
+@enduml

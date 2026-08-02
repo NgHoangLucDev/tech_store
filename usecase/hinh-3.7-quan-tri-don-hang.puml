@@ -1,0 +1,50 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam shadowing true
+skinparam usecase {
+    BackgroundColor #F8FAFC
+    BorderColor #3B82F6
+    FontColor #0F172A
+    FontSize 12
+    FontStyle bold
+}
+skinparam actor {
+    BackgroundColor #DBEAFE
+    BorderColor #1D4ED8
+}
+
+actor "Quản trị viên (Admin)" as Admin
+actor "Nhân viên (Staff)" as Staff
+
+rectangle "Phân Hệ Quản Trị Đơn Hàng (TechStore)" {
+  usecase "Xem danh sách đơn hàng" as UC_ViewOrders
+  usecase "Lọc đơn hàng theo trạng thái" as UC_FilterOrders
+  usecase "Tìm kiếm đơn hàng (Mã, SĐT, Tên)" as UC_SearchOrders
+  usecase "Xem chi tiết đơn hàng" as UC_ViewDetail
+  usecase "Cập nhật trạng thái đơn hàng" as UC_UpdateStatus
+  usecase "Chỉnh sửa thông tin đơn hàng" as UC_EditOrder
+  usecase "Xóa đơn hàng" as UC_DelOrder
+  usecase "Xử lý hóa đơn VAT" as UC_VAT
+  usecase "Quản lý thiết bị dùng thử (Trial)" as UC_Trial
+  usecase "Xuất danh sách đơn (Export CSV)" as UC_Export
+}
+
+' Phân quyền Staff
+Staff --> UC_ViewOrders
+Staff --> UC_FilterOrders
+Staff --> UC_SearchOrders
+Staff --> UC_ViewDetail
+Staff --> UC_UpdateStatus
+Staff --> UC_EditOrder
+Staff --> UC_Export
+
+' Phân quyền Admin
+Admin --|> Staff
+Admin --> UC_DelOrder
+
+' Quan hệ Extend
+UC_ViewDetail <.. UC_VAT : <<extend>>
+UC_ViewDetail <.. UC_Trial : <<extend>>
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam shadowing true
+skinparam usecase {
+    BackgroundColor #F8FAFC
+    BorderColor #8B5CF6
+    FontColor #0F172A
+    FontSize 12
+    FontStyle bold
+}
+skinparam actor {
+    BackgroundColor #EDE9FE
+    BorderColor #6D28D9
+}
+
+actor "Quản trị viên (Admin)" as Admin
+actor "Nhân viên (Staff)" as Staff
+
+rectangle "Phân Hệ Dashboard & Quản Trị Tổng (TechStore)" {
+  usecase "Đăng nhập hệ thống Admin" as UC_Login
+  usecase "Xem chỉ số KPI (Revenue, Orders, Stock, Users)" as UC_KPI
+  usecase "Xem biểu đồ xu hướng doanh thu (7D/30D)" as UC_Chart
+  usecase "Xuất báo cáo tổng quan (CSV)" as UC_ExportReport
+  usecase "Quản lý ERP Bảo hành & Tiếp nhận Ticket" as UC_Warranty
+  
+  usecase "Xem danh sách tài khoản người dùng" as UC_ViewUsers
+  usecase "Phân quyền người dùng (User/Staff/Admin)" as UC_Role
+  usecase "Đăng xuất" as UC_Logout
+}
+
+' Phân quyền Staff
+Staff --> UC_Login
+Staff --> UC_KPI
+Staff --> UC_Chart
+Staff --> UC_ExportReport
+Staff --> UC_Warranty
+Staff --> UC_Logout
+
+' Phân quyền Admin (Dành riêng cho Quản trị hệ thống)
+Admin --|> Staff
+Admin --> UC_ViewUsers
+Admin --> UC_Role
+
+' Quan hệ Include
+UC_KPI ..> UC_Login : <<include>>
+UC_ViewUsers ..> UC_Role : <<include>>
+@enduml

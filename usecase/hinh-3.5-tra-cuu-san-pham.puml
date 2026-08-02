@@ -1,0 +1,58 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam shadowing true
+
+skinparam usecase {
+    BackgroundColor #F8FAFC
+    BorderColor #10B981
+    FontColor #0F172A
+    FontSize 12
+    FontStyle bold
+}
+
+skinparam actor {
+    BackgroundColor #D1FAE5
+    BorderColor #059669
+}
+
+actor "Khách hàng / Người dùng" as User
+actor "Nhân viên (Staff) / Admin" as Staff
+
+rectangle "Phân Hệ Tra Cứu & Tìm Kiếm Sản Phẩm (TechStore)" {
+  usecase "Tìm kiếm sản phẩm theo từ khóa (Tên, Mã)" as UC_SearchKeyword
+  usecase "Gợi ý tìm kiếm tự động (Auto-complete)" as UC_AutoSuggest
+  usecase "Xem lịch sử & Từ khóa hot" as UC_SearchHistory
+  
+  usecase "Lọc sản phẩm theo Danh mục" as UC_FilterCategory
+  usecase "Lọc sản phẩm theo Khoảng giá" as UC_FilterPrice
+  usecase "Lọc theo Thông số kỹ thuật (CPU, RAM, VGA...)" as UC_FilterSpecs
+  usecase "Lọc sản phẩm theo Thương hiệu" as UC_FilterBrand
+  
+  usecase "Sắp xếp danh sách (Giá, Mới nhất, Bán chạy)" as UC_SortProducts
+  usecase "Xem chi tiết & Quick View sản phẩm" as UC_ViewDetail
+  usecase "Tra cứu tình trạng kho & Khuyến mãi" as UC_CheckStock
+  usecase "So sánh thông số sản phẩm" as UC_Compare
+}
+
+' Phân quyền Tác nhân
+User --> UC_SearchKeyword
+User --> UC_FilterCategory
+User --> UC_FilterPrice
+User --> UC_FilterBrand
+User --> UC_SortProducts
+User --> UC_ViewDetail
+
+' Staff kế thừa Khách hàng và tra cứu nâng cao
+Staff --|> User
+Staff --> UC_CheckStock
+
+' Quan hệ Include & Extend
+UC_SearchKeyword <.. UC_AutoSuggest : <<extend>>
+UC_SearchKeyword <.. UC_SearchHistory : <<extend>>
+UC_FilterCategory <.. UC_FilterSpecs : <<extend>>
+UC_ViewDetail ..> UC_CheckStock : <<include>>
+UC_ViewDetail <.. UC_Compare : <<extend>>
+
+@enduml
