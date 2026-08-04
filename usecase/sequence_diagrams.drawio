@@ -1,0 +1,1381 @@
+<mxfile host="Electron" modified="2023-11-01T00:00:00.000Z" agent="Mozilla/5.0" version="22.0.4" type="device">
+  <diagram id="page1" name="Hình 3.10 Đăng ký">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page1-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="page1-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="page1-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="page1-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="page1-lf-4" value="Email Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="770" y="40" width="110" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="page1-msg-0" value="Nhập thông tin" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-0" target="page1-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-1" value="Validate" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-1" target="page1-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="325" y="140" />
+              <Point x="325" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-2" value="Gửi yêu cầu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-1" target="page1-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-3" value="Kiểm tra tồn tại" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-4" value="Kết quả" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-3" target="page1-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-5" value="[Đã tồn tại] Báo lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-6" value="Hiển thị lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-1" target="page1-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-7" value="[Hợp lệ] Lưu tạm" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-8" value="Tạo OTP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="505" y="435" />
+              <Point x="505" y="455" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-9" value="Yêu cầu gửi OTP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-10" value="Gửi email chứa OTP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-4" target="page1-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="825" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-11" value="Yêu cầu nhập OTP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-12" value="Hiển thị form" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-1" target="page1-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-13" value="Nhập OTP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-0" target="page1-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-14" value="Gửi xác thực" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-1" target="page1-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-15" value="Đối chiếu OTP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-16" value="Kết quả" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-3" target="page1-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-17" value="[Sai] Báo lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-18" value="Hiển thị lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-1" target="page1-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-19" value="[Đúng] Cập nhật TK" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-20" value="Thành công" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-2" target="page1-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page1-msg-21" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page1-lf-1" target="page1-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="970" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page2" name="Hình 3.11 Đăng nhập">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page2-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="page2-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="page2-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="page2-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="page2-msg-0" value="Nhập thông tin" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page2-lf-0" target="page2-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-1" value="Gửi yêu cầu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page2-lf-1" target="page2-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-2" value="Lấy thông tin TK" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page2-lf-2" target="page2-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-3" value="Dữ liệu (kèm hash)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page2-lf-3" target="page2-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-4" value="[Không tìm thấy] Lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page2-lf-2" target="page2-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-5" value="Hiển thị lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page2-lf-1" target="page2-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-6" value="[Có TK] Hash PBKDF2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page2-lf-2" target="page2-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="505" y="340" />
+              <Point x="505" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-7" value="[Sai mật khẩu] Lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page2-lf-2" target="page2-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-8" value="Hiển thị lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page2-lf-1" target="page2-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-9" value="[Đúng] Tạo Token" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page2-lf-2" target="page2-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="505" y="475" />
+              <Point x="505" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-10" value="Trả Token &amp; User" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page2-lf-2" target="page2-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-11" value="Lưu Zustand" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page2-lf-1" target="page2-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="325" y="570" />
+              <Point x="325" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page2-msg-12" value="Chuyển hướng" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page2-lf-1" target="page2-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="625" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page3" name="Hình 3.12 Tra cứu SP">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page3-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="page3-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="page3-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="page3-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="page3-msg-0" value="Nhập từ khóa/bộ lọc" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page3-lf-0" target="page3-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page3-msg-1" value="Tìm kiếm" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page3-lf-1" target="page3-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page3-msg-2" value="Truy vấn SP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page3-lf-2" target="page3-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page3-msg-3" value="Danh sách SP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page3-lf-3" target="page3-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page3-msg-4" value="Trả dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page3-lf-2" target="page3-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page3-msg-5" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page3-lf-1" target="page3-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page4" name="Hình 3.13 Chi tiết SP">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page4-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page4-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page4-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page4-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page4-msg-0" value="Chọn SP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page4-lf-0" target="page4-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page4-msg-1" value="Yêu cầu chi tiết" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page4-lf-1" target="page4-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page4-msg-2" value="Lấy thông tin" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page4-lf-2" target="page4-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page4-msg-3" value="Dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page4-lf-3" target="page4-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page4-msg-4" value="Lấy đánh giá &amp; liên quan" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page4-lf-2" target="page4-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page4-msg-5" value="Dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page4-lf-3" target="page4-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page4-msg-6" value="Trả toàn bộ dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page4-lf-2" target="page4-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page4-msg-7" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page4-lf-1" target="page4-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page5" name="Hình 3.14 Giỏ hàng">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page5-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="page5-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="page5-lf-2" value="LocalStorage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="page5-msg-0" value="Thêm vào giỏ" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page5-lf-0" target="page5-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page5-msg-1" value="Kiểm tra SP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page5-lf-1" target="page5-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="325" y="140" />
+              <Point x="325" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page5-msg-2" value="[Đã có] Tăng SL" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page5-lf-1" target="page5-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="325" y="195" />
+              <Point x="325" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page5-msg-3" value="[Chưa có] Thêm SP mới" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page5-lf-1" target="page5-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="325" y="250" />
+              <Point x="325" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page5-msg-4" value="Cập nhật Storage" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page5-lf-1" target="page5-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page5-msg-5" value="Thông báo &amp; cập nhật UI" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page5-lf-1" target="page5-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page6" name="Hình 3.15 Đặt hàng">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page6-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="page6-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="page6-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="page6-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="page6-lf-4" value="PaymentGateway" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="770" y="40" width="110" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="page6-msg-0" value="Điền thông tin &amp; thanh toán" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-0" target="page6-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-1" value="Đặt hàng" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-1" target="page6-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-2" value="Kiểm tra tồn kho" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-3" value="Trạng thái" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-3" target="page6-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-4" value="[Hết hàng] Báo lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-5" value="Hiển thị lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-1" target="page6-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-6" value="[Còn] Lưu đơn hàng" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-7" value="Trừ tạm tồn kho" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-8" value="[Online] Tạo phiên TT" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-9" value="Trả URL" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-4" target="page6-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="825" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-10" value="Trả URL" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-11" value="Chuyển hướng TT" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-1" target="page6-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-12" value="Thực hiện TT" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-0" target="page6-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-13" value="Webhook thành công" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-4" target="page6-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="825" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-14" value="Cập nhật Đã TT" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-15" value="[COD] Trả kết quả" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-2" target="page6-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page6-msg-16" value="Hiển thị xác nhận" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page6-lf-1" target="page6-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page7" name="Hình 3.16 Theo dõi ĐH">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page7-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="page7-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="page7-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="page7-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="page7-msg-0" value="Vào lịch sử ĐH" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page7-lf-0" target="page7-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-1" value="Yêu cầu danh sách" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page7-lf-1" target="page7-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-2" value="Lấy danh sách" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page7-lf-2" target="page7-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-3" value="Dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page7-lf-3" target="page7-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-4" value="Trả dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page7-lf-2" target="page7-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-5" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page7-lf-1" target="page7-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-6" value="Xem timeline ĐH" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page7-lf-0" target="page7-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-7" value="Yêu cầu timeline" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page7-lf-1" target="page7-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-8" value="Lấy lịch sử trạng thái" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page7-lf-2" target="page7-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-9" value="Dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page7-lf-3" target="page7-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-10" value="Trả dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page7-lf-2" target="page7-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page7-msg-11" value="Hiển thị timeline" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page7-lf-1" target="page7-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page8" name="Hình 3.17 Admin thêm SP">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page8-lf-0" value="Admin" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page8-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page8-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page8-lf-3" value="CloudStorage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page8-lf-4" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="770" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page8-msg-0" value="Điền SP &amp; chọn ảnh" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page8-lf-0" target="page8-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-1" value="Tải ảnh" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page8-lf-1" target="page8-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-2" value="Upload ảnh" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page8-lf-2" target="page8-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-3" value="URL ảnh" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page8-lf-3" target="page8-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-4" value="Xác nhận" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page8-lf-2" target="page8-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-5" value="Gửi thông tin SP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page8-lf-1" target="page8-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-6" value="Lưu SP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page8-lf-2" target="page8-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-7" value="Xác nhận" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page8-lf-4" target="page8-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="825" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-8" value="Trả kết quả" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page8-lf-2" target="page8-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page8-msg-9" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page8-lf-1" target="page8-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page9" name="Hình 3.18 Admin sinh BH">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page9-lf-0" value="Admin" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page9-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page9-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page9-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="page9-msg-0" value="Cập nhật Hoàn thành" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page9-lf-0" target="page9-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-1" value="Yêu cầu cập nhật" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page9-lf-1" target="page9-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-2" value="Đổi TT Hoàn thành" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page9-lf-2" target="page9-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-3" value="Lấy danh sách thiết bị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page9-lf-2" target="page9-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-4" value="Chi tiết thiết bị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page9-lf-3" target="page9-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-5" value="Tính thời gian BH" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page9-lf-2" target="page9-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="505" y="300" />
+              <Point x="505" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-6" value="Sinh BH theo Serial" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page9-lf-2" target="page9-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-7" value="Xác nhận" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page9-lf-3" target="page9-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-8" value="Thành công" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page9-lf-2" target="page9-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page9-msg-9" value="Cập nhật UI" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page9-lf-1" target="page9-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="475" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page10" name="Hình 3.19 Admin hủy đơn">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page10-lf-0" value="Admin" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="page10-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="page10-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="page10-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="page10-msg-0" value="Hủy đơn hàng" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page10-lf-0" target="page10-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-1" value="Yêu cầu hủy" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page10-lf-1" target="page10-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-2" value="Lấy thông tin đơn" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page10-lf-2" target="page10-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-3" value="Thông tin" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page10-lf-3" target="page10-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-4" value="Đổi TT Đã hủy" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page10-lf-2" target="page10-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-5" value="Lấy số lượng SP" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page10-lf-2" target="page10-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-6" value="Số lượng" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page10-lf-3" target="page10-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-7" value="Cộng lại vào kho" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page10-lf-2" target="page10-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-8" value="Xác nhận" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page10-lf-3" target="page10-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-9" value="Thành công" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page10-lf-2" target="page10-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page10-msg-10" value="Cập nhật UI" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page10-lf-1" target="page10-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page11" name="Hình 3.20 Tra cứu BH">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page11-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page11-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page11-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page11-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page11-msg-0" value="Nhập SĐT/Serial" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page11-lf-0" target="page11-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page11-msg-1" value="Yêu cầu tra cứu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page11-lf-1" target="page11-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page11-msg-2" value="Tìm kiếm" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page11-lf-2" target="page11-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page11-msg-3" value="Kết quả" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page11-lf-3" target="page11-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page11-msg-4" value="[Không thấy] Lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page11-lf-2" target="page11-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page11-msg-5" value="Hiển thị lỗi" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page11-lf-1" target="page11-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page11-msg-6" value="[Tìm thấy] Trả dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page11-lf-2" target="page11-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page11-msg-7" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page11-lf-1" target="page11-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page12" name="Hình 3.21 Tạo ticket">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page12-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page12-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page12-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page12-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="page12-msg-0" value="Chọn TB &amp; mô tả" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page12-lf-0" target="page12-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page12-msg-1" value="Yêu cầu bảo hành" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page12-lf-1" target="page12-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page12-msg-2" value="Kiểm tra hạn BH" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page12-lf-2" target="page12-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page12-msg-3" value="Hợp lệ" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page12-lf-3" target="page12-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page12-msg-4" value="Tạo phiếu BH" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page12-lf-2" target="page12-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page12-msg-5" value="Xác nhận" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page12-lf-3" target="page12-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page12-msg-6" value="Mã phiếu" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page12-lf-2" target="page12-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page12-msg-7" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page12-lf-1" target="page12-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page13" name="Hình 3.22 Dùng thử">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page13-lf-0" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="page13-lf-1" value="Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="page13-lf-2" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="page13-lf-3" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="page13-lf-4" value="PaymentGateway" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="770" y="40" width="110" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="page13-msg-0" value="Chọn dùng thử" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-0" target="page13-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-1" value="Đăng ký" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-1" target="page13-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-2" value="Kiểm tra điều kiện" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-2" target="page13-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-3" value="Hợp lệ" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page13-lf-3" target="page13-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-4" value="Tạo hồ sơ" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-2" target="page13-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-5" value="Tạo phiên cọc" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-2" target="page13-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-6" value="URL TT" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page13-lf-4" target="page13-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="825" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-7" value="URL TT" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page13-lf-2" target="page13-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-8" value="Chuyển hướng" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page13-lf-1" target="page13-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-9" value="Thanh toán cọc" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-0" target="page13-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-10" value="Webhook cọc" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-4" target="page13-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="825" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-11" value="Cập nhật Đang dùng thử" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page13-lf-2" target="page13-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-12" value="Thành công" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page13-lf-2" target="page13-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page13-msg-13" value="Hiển thị" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page13-lf-1" target="page13-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page14" name="Hình 3.23 Cron check">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page14-lf-0" value="Cron Job" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="110" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="page14-lf-1" value="Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="110" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="page14-lf-2" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="110" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="page14-lf-3" value="EmailService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="110" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="page14-lf-4" value="Khách Hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" vertex="1" parent="1">
+          <mxGeometry x="770" y="40" width="110" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="page14-msg-0" value="Chạy quét hàng ngày" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page14-lf-0" target="page14-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="105" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-1" value="Tìm gói hết hạn/sắp hết" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page14-lf-1" target="page14-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-2" value="Danh sách" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page14-lf-2" target="page14-lf-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="465" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-3" value="[Sắp hết hạn] Gửi mail nhắc" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page14-lf-1" target="page14-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-4" value="Nhận mail" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page14-lf-3" target="page14-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-5" value="[Quá hạn] Đổi TT" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page14-lf-1" target="page14-lf-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-6" value="Gửi mail phạt" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="page14-lf-1" target="page14-lf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-7" value="Nhận mail" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page14-lf-3" target="page14-lf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="645" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page14-msg-8" value="Xong" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;" edge="1" parent="1" source="page14-lf-1" target="page14-lf-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="285" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
