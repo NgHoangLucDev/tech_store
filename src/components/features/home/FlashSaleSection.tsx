@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useCartStore } from '@/store/useCartStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import toast from 'react-hot-toast';
 
 const MOCK_PRODUCTS = [
@@ -149,6 +150,7 @@ export const FlashSaleSection = ({ products: dbProducts }: { products?: any[] | 
 const FlashSaleCard = ({ id, name, price, originalPrice, image, sold, total, theme, t }: any) => {
   const percentSold = (sold / total) * 100;
   const { addItem } = useCartStore();
+  const { user } = useAuthStore();
   const router = useRouter();
   
   return (
@@ -225,7 +227,16 @@ const FlashSaleCard = ({ id, name, price, originalPrice, image, sold, total, the
               Thêm vào giỏ
            </button>
            <button 
-             onClick={(e) => { e.stopPropagation(); addItem({ id, name, price, image }); router.push('/checkout'); }}
+             onClick={(e) => { 
+               e.stopPropagation(); 
+               if (!user) {
+                 toast.error('Vui lòng đăng nhập để mua hàng');
+                 router.push('/login');
+               } else {
+                 addItem({ id, name, price, image }); 
+                 router.push('/checkout'); 
+               }
+             }}
              className="w-full h-11 bg-primary text-white rounded-xl text-[9px] font-black uppercase tracking-[0.2em] transition-all shadow-lg shadow-primary/30"
            >
               Mua ngay

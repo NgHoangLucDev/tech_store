@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useCartStore } from '@/store/useCartStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import { useSettingsStore } from '@/store/useSettingsStore';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -20,6 +21,7 @@ import toast from 'react-hot-toast';
 
 export default function CartPage() {
   const { items, updateQuantity, removeItem, totalPrice, totalItems, addItem } = useCartStore();
+  const { user } = useAuthStore();
   const { theme } = useSettingsStore();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -322,7 +324,14 @@ export default function CartPage() {
                    </div>
 
                    <button 
-                     onClick={() => router.push('/checkout')}
+                     onClick={() => {
+                       if (!user) {
+                         toast.error('Vui lòng đăng nhập để tiến hành đặt hàng');
+                         router.push('/login');
+                       } else {
+                         router.push('/checkout');
+                       }
+                     }}
                      className="w-full h-16 bg-red-600 text-white rounded-2xl font-black flex items-center justify-center gap-4 hover:bg-red-700 transition-all shadow-xl shadow-red-600/30 group active:scale-95"
                    >
                       ĐẶT HÀNG NGAY

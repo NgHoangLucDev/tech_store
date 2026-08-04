@@ -90,6 +90,11 @@ export default function CheckoutPage() {
     if (items.length === 0) {
       router.push('/cart');
     }
+    if (!user) {
+      toast.error('Vui lòng đăng nhập để thanh toán');
+      router.push('/login');
+      return;
+    }
     if (user) {
       const fetchAddresses = async () => {
         try {

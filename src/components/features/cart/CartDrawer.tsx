@@ -8,6 +8,8 @@ import { useAuthStore } from '@/store/useAuthStore';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
 
+import { useRouter } from 'next/navigation';
+
 interface CartDrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -16,6 +18,7 @@ interface CartDrawerProps {
 export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
   const { items, removeItem, updateQuantity, totalItems, totalPrice, clearCart } = useCartStore();
   const { user } = useAuthStore();
+  const router = useRouter();
   
   const [mounted, setMounted] = React.useState(false);
   const [deliveryMethod, setDeliveryMethod] = useState<'pickup' | 'shipping'>('shipping');
@@ -42,6 +45,14 @@ export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
 
   const handleCheckout = async () => {
     if (items.length === 0) return;
+    
+    if (!user) {
+      toast.error("Vui lòng đăng nhập để tiến hành đặt hàng");
+      onClose();
+      router.push('/login');
+      return;
+    }
+
     if (deliveryMethod === 'shipping' && !address) {
       toast.error("Vui lòng nhập địa chỉ giao hàng");
       return;

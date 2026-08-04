@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Plus } from 'lucide-react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { useCartStore } from '@/store/useCartStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import { useSettingsStore } from '@/store/useSettingsStore';
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
@@ -34,6 +35,7 @@ export const ProductCard = ({
   onClick,
 }: ProductCardProps) => {
   const { addItem } = useCartStore();
+  const { user } = useAuthStore();
   const { theme } = useSettingsStore();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -191,7 +193,16 @@ export const ProductCard = ({
                   Thêm vào giỏ
                </button>
                <button 
-                 onClick={(e) => { e.stopPropagation(); addItem({ id, name, price, image }); router.push('/checkout'); }}
+                 onClick={(e) => { 
+                   e.stopPropagation(); 
+                   if (!user) {
+                     toast.error('Vui lòng đăng nhập để mua hàng');
+                     router.push('/login');
+                   } else {
+                     addItem({ id, name, price, image }); 
+                     router.push('/checkout'); 
+                   }
+                 }}
                  className="w-full h-12 bg-primary text-white rounded-xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-lg shadow-primary/20"
                >
                   Mua ngay

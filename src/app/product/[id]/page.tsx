@@ -15,6 +15,7 @@ import { Footer } from '@/components/layout/Footer';
 import { ProductCard } from '@/components/features/product/ProductCard';
 import { ALL_PRODUCTS } from '@/lib/data';
 import { useCartStore } from '@/store/useCartStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import { useSettingsStore } from '@/store/useSettingsStore';
 import { cn } from '@/lib/utils';
 import toast from 'react-hot-toast';
@@ -23,6 +24,7 @@ export default function ProductDetail() {
   const { id } = useParams();
   const router = useRouter();
   const { addItem } = useCartStore();
+  const { user } = useAuthStore();
   const { theme } = useSettingsStore();
   const [mounted, setMounted] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -173,6 +175,11 @@ export default function ProductDetail() {
   };
 
   const handleBuyNow = () => {
+    if (!user) {
+      toast.error('Vui lòng đăng nhập để tiến hành mua hàng');
+      router.push('/login');
+      return;
+    }
     // Add main product
     addItem({ ...product, quantity });
     
